@@ -3,11 +3,14 @@
   align-items: center;
 }
 
-#input-field {
+#input-field,
+#history-container {
   flex-grow: 1;
   margin-right: 10px;
   padding: 10px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #mic-btn {
@@ -58,4 +61,9 @@
 }
 
 .message {
-  margin:
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
