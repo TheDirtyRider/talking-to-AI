@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Input Example</title>
+</head>
+<body>
+  <form>
+    <label for="input">Enter your message:</label>
+    <input type="text" id="input" name="input">
+    <button type="button" id="speak">Speak</button>
+  </form>
+
+  <script>
+    const input = document.getElementById('input');
+    const speakButton = document.getElementById('speak');
+
+    // Create a new SpeechRecognition object
+    const recognition = new window.webkitSpeechRecognition();
+
+    // Set some options for the recognition
+    recognition.continuous = false;
+    recognition.lang = 'en-US';
+
+    // Add an event listener for when the recognition starts
+    recognition.onstart = () => {
+      console.log('Voice input started...');
+    };
+
+    // Add an event listener for when the recognition ends
+    recognition.onend = () => {
+      console.log('Voice input ended.');
+    };
+
+    // Add an event listener for when the recognition returns results
+    recognition.onresult = (event) => {
+      const spokenInput = event.results[0][0].transcript;
+      console.log(`Spoken input: ${spokenInput}`);
+      input.value = spokenInput;
+    };
+
+    // Add an event listener to the speak button
+    speakButton.addEventListener('click', () => {
+      recognition.start();
+    });
+  </script>
+</body>
+</html>
