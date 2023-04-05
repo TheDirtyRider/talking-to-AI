@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-// Replace the path below with the path to your chat history file
+// Replace the path below with the path to your chat history file. so for me it looks like C:\Users\Nope\Desktop\my-website\chat_hisotry.txt
 const filePath = "/path/to/your/chat_history.txt";
 
 // Read the contents of the chat history file
