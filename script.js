@@ -9,8 +9,9 @@ const historyContainer = document.getElementById("history-container");
 
 let isRecording = false;
 
+let finalTranscript = "";
+
 recognition.onresult = function(event) {
-  let finalTranscript = "";
   for (let i = event.resultIndex; i < event.results.length; i++) {
     const transcript = event.results[i][0].transcript;
     if (event.results[i].isFinal) {
@@ -20,7 +21,7 @@ recognition.onresult = function(event) {
     }
   }
   inputField.value = finalTranscript;
-  historyContainer.innerHTML += `<p class="message">${finalTranscript}</p>`;
+  historyContainer.innerHTML = `<p class="message">${finalTranscript}</p>`;
 };
 
 recognition.onstart = function() {
