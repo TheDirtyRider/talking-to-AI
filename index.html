@@ -122,16 +122,11 @@ recognition.onresult = (event) => {
   for (let i = 0; i < history.length; i++) {
     historyBox.innerHTML += `<p>${history[i]}</p>`;
   }
-
-  // If the final transcript contains the word "microphone", ask for permission to use the microphone
-  if (finalTranscript.toLowerCase().includes('microphone')) {
-    navigator.mediaDevices.getUserMedia({ audio: true })
-      .then(stream => {
-        console.log('Microphone permission granted');
-        recognition.start();
-      })
-      .catch(error => {
-        console.error(`Microphone permission denied: ${error}`);
-      });
-  }
 };
+    // Add an event listener to the speak button
+    speakButton.addEventListener('click', () => {
+      recognition.start();
+    });
+  </script>
+</body>
+</html>
