@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="history-container"></div>
+      <div id="input-container">
+        <input type="text" id="input-field" placeholder="Type your message here" />
+        <button id="mic-btn">
+          <img id="mic-img" src="images/mic-off.png" alt="microphone" />
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
