@@ -1,0 +1,36 @@
+#container {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#history-container {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#input-container {
+  display: flex;
+  align-items: center;
+}
+
+#input-field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#mic-img {
+  width: 20px;
+  height: 20px;
+}
+
+#mic-btn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
