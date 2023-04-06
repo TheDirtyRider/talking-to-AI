@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Speech Recognition Website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="input-field" placeholder="Speak here...">
+      <button id="mic-btn"><i class="fa fa-microphone"></i></button>
+      <div id="mic-status"></div>
+    </div>
+    <div id="history-container"></div>
+    <button id="export-btn">Export History</button>
+    <script src="https://cdn.jsdelivr.net/npm/@openai/chat-api@0.7.1/dist/index.min.js"></script>
+    <script src="script.js"></script>
+    <script src="export_history.js"></script>
+  </body>
+</html>
